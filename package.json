@@ -1,0 +1,20 @@
+{
+  "name": "auth",
+  "version": "0.9.0",
+  "description": "Authentication to Alloy City clients",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "npx webpack --config webpack.dev.config.js",
+    "build:prod": "npx webpack --config webpack.prod.config.js"
+  },
+  "author": "Bernardo SOUSA",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.14"
+  },
+  "dependencies": {
+    "ifdef-loader": "^2.0.3"
+  }
+}
