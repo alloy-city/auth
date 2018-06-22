@@ -28,6 +28,7 @@ export default function () {
                 Auth.userData = response.userData
                 apiDomain = response.environmentVariables.apiDomain
                 socketDomain = response.environmentVariables.socketDomain
+                googleAPIkey = response.environmentVariables.googleAPIkey
                 localStorage.setItem("userData", JSON.stringify(Auth.userData))
 
                 if (response.userData.accessLevel > 0) {
