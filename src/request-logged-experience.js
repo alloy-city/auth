@@ -102,11 +102,8 @@ export default function () {
             })
         } else {
             console.log(response)
-            response.json().then(err => {
-                console.log(err)
-                localStorage.clear()
-                location.reload()
-            })
+            localStorage.clear()
+            location.reload()
         }
     })
 }
