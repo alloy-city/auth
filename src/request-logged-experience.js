@@ -17,7 +17,7 @@ export default function () {
         if (response.ok) {
             response.json().then(response => {
 
-                console.log(response)
+                // console.log(response)
 
                 // remove social login buttons
                 let g = document.getElementById("googleSignIn")
@@ -83,7 +83,7 @@ export default function () {
 
                 } else {
                     // student
-                    console.log("/me response:", response)
+                    // console.log("/me response:", response)
 
                     string = response.strings
                     Auth.chapters = response.chapters
