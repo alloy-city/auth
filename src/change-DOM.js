@@ -53,6 +53,8 @@ function goodAccount() {
 }
 
 function wrongPassword() {
+    let confirm = document.getElementById("confirm")
+    
     document.getElementById("auth-instruction").innerText = string.auth.wrongPassword
     document.getElementById("password-container").classList.remove("hidden")
     confirm.innerHTML = string.auth.login
@@ -102,6 +104,8 @@ function receiveCode() {
 }
 
 function resetPassword() {
+    let confirm = document.getElementById("confirm")
+
     document.getElementById("auth-instruction").innerText = string.auth.resetPasswordInstructions
     document.getElementById("password-container").classList.add("hidden")
     confirm.innerHTML = string.auth.confirmResetPassword
@@ -109,6 +113,8 @@ function resetPassword() {
 }
 
 function prepareToReceiveResetPasswordCode() {
+    let confirm = document.getElementById("confirm")
+
     document.getElementById("auth-instruction").innerText = string.auth.resetPasswordCodeSent
     document.getElementById("code-container").classList.remove("hidden")
     confirm.innerHTML = string.buttons.verify
@@ -116,6 +122,8 @@ function prepareToReceiveResetPasswordCode() {
 }
 
 function prepareToCreateNewPassword() {
+    let confirm = document.getElementById("confirm")
+
     $(".alert").remove()
     document.getElementById("code-container").classList.add("hidden")
     document.getElementById("password-container").classList.remove("hidden")
