@@ -85,6 +85,10 @@ export default function () {
                     // student
                     // console.log("/me response:", response)
 
+                    if (Auth.userData.uiLanguage != 'en' && Auth.userData.uiLanguage != 'pt-br' && Auth.userData.uiLanguage != 'fr') {
+                        Auth.userData.uiLanguage = 'en'
+                    }
+
                     string = response.strings
                     Auth.chapters = response.chapters
                     localStorage.setItem("modules", JSON.stringify(Auth.modules))
