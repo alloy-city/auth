@@ -1,7 +1,11 @@
 {
   "name": "auth",
-  "version": "0.9.2",
+  "version": "1.0.0",
   "description": "Authentication to Alloy City clients",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alloy-city/auth.git"
+  },
   "main": "./src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,10 +15,8 @@
   "author": "Bernardo SOUSA",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^4.16.3",
-    "webpack-cli": "^3.1.0"
-  },
-  "dependencies": {
-    "ifdef-loader": "^2.0.3"
+    "webpack": "4.35.3",
+    "webpack-cli": "3.3.5",
+    "ifdef-loader": "2.1.1"
   }
 }
