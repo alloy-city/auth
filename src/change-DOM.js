@@ -79,15 +79,32 @@ function noAccount() {
 }
 
 function askForCode() {
-    document.getElementById("auth-instruction").innerHTML =
-        `<p>${string.auth.codeSent[0]} <span class="text-primary">${localStorage.email}</span></p>
-        <p>${string.auth.codeSent[1]}</p>`
+    let sentTo = document.createElement("p");
+    sentTo.innerHTML = `${string.auth.codeSent[0]} <span class="text-primary">${localStorage.email}</span>`;
+
+    let resetParagraph = document.createElement("p");
+    resetParagraph.classList.add("link-button");
+    let reset = document.createElement("a");
+    reset.innerText = string.auth.wrongEmail;
+    resetParagraph.appendChild(reset);
+    reset.onclick = () => {
+        localStorage.clear();
+        location.reload();
+    }
+
+    let senderIs = document.createElement("p");
+    senderIs.innerText = string.auth.codeSent[1];
+
+    let instruction = document.getElementById("auth-instruction");
+    instruction.innerHTML = "";
+
+    instruction.appendChild(sentTo);
+    instruction.appendChild(resetParagraph);
+    instruction.appendChild(senderIs);
 }
 
 function receiveCode() {
-    document.getElementById("auth-instruction").innerHTML =
-        `<p>${string.auth.codeSent[0]} <span class="text-primary">${localStorage.email}</span></p>
-        <p>${string.auth.codeSent[1]}</p>`
+    askForCode();
     document.getElementById("email-container").remove()
     document.getElementById("password-container").remove()
     document.getElementById("code-container").classList.remove("hidden")
