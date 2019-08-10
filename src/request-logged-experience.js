@@ -1,5 +1,4 @@
 export default function () {
-
     let headers = new Headers({
         "Content-Type": "application/json",
         "Language": language,
@@ -80,7 +79,6 @@ export default function () {
                         script.classList = "teacher"
                         document.body.appendChild(script)
                     }
-
                 } else {
                     // student
                     // console.log("/me response:", response)
@@ -101,7 +99,6 @@ export default function () {
                     let paymentModule = document.createElement("script")
                     paymentModule.setAttribute("src", "/modules/payment-bundle.js")
                     document.head.appendChild(paymentModule)
-
                 }
             })
         } else {
