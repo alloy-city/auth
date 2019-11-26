@@ -33,3 +33,7 @@ window.Auth = {
     database,
     impersonate
 }
+
+if (localStorage.showPack) {
+    window.addEventListener('load', showLoginForm);
+}

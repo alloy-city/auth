@@ -1,6 +1,6 @@
 {
   "name": "auth",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Authentication to Alloy City clients",
   "repository": {
     "type": "git",
@@ -15,8 +15,8 @@
   "author": "Bernardo SOUSA",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "4.35.3",
-    "webpack-cli": "3.3.5",
-    "ifdef-loader": "2.1.1"
+    "webpack": "4.41.2",
+    "webpack-cli": "3.3.10",
+    "ifdef-loader": "2.1.4"
   }
 }
