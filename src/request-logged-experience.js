@@ -25,6 +25,9 @@ export default function () {
                 if (g) g.classList.add("hidden")
 
                 Auth.userData = response.userData
+                Auth.minimumInstalmentPrice = response.environmentVariables.minimumInstalmentPrice
+                Auth.fullPaymentFraction = response.environmentVariables.fullPaymentFraction
+                Auth.maxInstalments = response.environmentVariables.maxInstalments
                 apiDomain = response.environmentVariables.apiDomain
                 socketDomain = response.environmentVariables.socketDomain
                 googleAPIKey = response.environmentVariables.googleAPIKey
